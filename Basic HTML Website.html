@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        /* --- Pengaturan Dasar & Gaya Wireframe --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background-color: #fff;
+            color: #000;
+        }
 
+        /* Pembungkus utama untuk memberi batas */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Garis pemisah horizontal */
+        hr.solid {
+            border: 0;
+            border-top: 2px solid #000;
+            margin: 30px 0;
+        }
+
+        a {
+            color: #0000ee; /* Warna link biru standar */
+        }
+
+        /* --- Header / Navigasi --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 25px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.1em;
+        }
+
+        /* --- Bagian Hero Judul --- */
+        .hero {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #333; /* Sedikit abu-abu seperti di gambar */
+            margin-top: 5px;
+        }
+
+        /* --- Konten Utama (3 Kolom) --- */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.5fr; /* Kolom 1 lebih kecil */
+            gap: 30px;
+            border-top: 2px solid #000;
+            padding-top: 20px;
+        }
+
+        .main-content section {
+            padding-right: 30px;
+        }
+
+        /* Garis pemisah vertikal */
+        .projects, .work-experience {
+            border-right: 2px solid #000;
+        }
+
+        .main-content h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+
+        /* Kolom 1: Projects */
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-list li {
+            border: 2px solid #000;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* Kolom 2: Work Experience */
+        .job {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #000;
+        }
+        .job:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .job h3 {
+            margin: 0 0 5px 0;
+        }
+
+        /* Kolom 3: Education */
+        .education ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .education li {
+            margin-bottom: 5px;
+        }
+
+
+        /* --- Bagian Reviews --- */
+        .reviews {
+            text-align: center;
+        }
+
+        .reviews h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+
+        .review-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom sama rata */
+            gap: 20px;
+        }
+
+        .review-card {
+            border: 2px solid #000;
+            border-radius: 15px; /* Sesuai gambar (sudut melengkung) */
+            padding: 20px;
+            background-color: #f9f9f9; /* Latar belakang kartu sedikit abu-abu */
+            text-align: left;
+        }
+        
+        .review-card .quote {
+            font-style: italic;
+        }
+
+        .review-card .name {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .review-card .title {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 3px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">your name</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Frontend Developer</h1>
+            <p>Html only with proper layout, no styling</p>
+        </section>
+
+        <main class="main-content">
+            
+            <section class="projects">
+                <h2>Projects</h2>
+                <ul class="project-list">
+                    <li>HTML Only Portfolio</li>
+                    <li>Calculator</li>
+                    <li>Quiz App</li>
+                    <li>Countdown Timer</li>
+                    <li>Product Upcoming Page</li>
+                </ul>
+            </section>
+            
+            <section class="work-experience">
+                <h2>Work Experience</h2>
+                <div class="job">
+                    <h3>roadmap.sh</h3>
+                    <p>Solved all the frontend projects</p>
+                    <a href="#">Visit my Profile</a>
+                </div>
+                <div class="job">
+                    <h3>OpenSource Work</h3>
+                    <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+                    <a href="#">Visit my GitHub Profile</a>
+                </div>
+            </section>
+            
+            <section class="education">
+                <h2>Education</h2>
+                <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+                <p><strong>Courses I took:</strong></p>
+                <ul>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                    <li>Discreet Mathematics</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <hr class="solid">
+
+        <section class="reviews">
+            <h2>Reviews from my Teachers</h2>
+            
+            <div class="review-container">
+                <div class="review-card">
+                    <p class="quote">"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="title">Assistant Professor</p>
+                </div>
+                <div class="review-card">
+                    <p class="quote">"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="title">Assistant Professor</p>
+                </div>
+                <div class="review-card">
+                    <p class="quote">"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="title">Assistant Professor</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="solid">
+
+        <footer>
+            <p>© all rights reserved 2025</p>
+        </footer>
+
+    </div> </body>
+</html>
